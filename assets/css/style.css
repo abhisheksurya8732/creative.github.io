@@ -87,7 +87,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     height: 80vh;
-    background: url(/assets/img/student\ bg.jpeg) no-repeat center/cover;
+    background: url(assets/img/student\ bg.jpeg) no-repeat center/cover;
     text-align: center;
     color: white;
     position: relative;
