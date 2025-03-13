@@ -6,17 +6,62 @@
 <title>Enrollment Data</title>
 <style>
     body {
-/*         display:none; */
+        /* display:none; */
         background-color: #ccc;
     }
   body { font-family: Arial, sans-serif; padding: 20px; }
   .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; }
+  button { padding: 5px 10px; background-color: red; color: white; border: none; cursor: pointer; }
+
 </style>
 </head>
 <body>
+
+
   <h2>Enrollment Details</h2>
   <div id="enrollments"></div>
 
+<script>
+  const enrollments = JSON.parse(localStorage.getItem('enrollments')) || [];
+
+  const container = document.getElementById('enrollments');
+
+  function renderEnrollments() {
+    container.innerHTML = '';
+    enrollments.forEach((data, index) => {
+      const box = document.createElement('div');
+      box.classList.add('box');
+      box.innerHTML = `
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Course:</strong> ${data.course}</p>
+        <button onclick="deleteEnrollment(${index})">Delete</button>
+      `;
+      container.appendChild(box);
+    });
+  }
+
+  function deleteEnrollment(index) {
+    enrollments.splice(index, 1);
+    localStorage.setItem('enrollments', JSON.stringify(enrollments));
+    renderEnrollments();
+  }
+
+  renderEnrollments();
+
+  // 10 second ke baad redirect to index.html
+  setTimeout(() => {
+    window.location.href = 'index.html';
+  }, 10000);
+</script>
+
+
+
+
+  <!-- <h2>Enrollment Details</h2>
+  <div id="enrollments"></div> -->
+<!-- 
 <script>
   const enrollments = JSON.parse(localStorage.getItem('enrollments')) || [];
 
@@ -32,6 +77,6 @@
     `;
     container.appendChild(box);
   });
-</script>
+</script> -->
 </body>
 </html>
