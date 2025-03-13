@@ -17,10 +17,12 @@
         <div class="logo">CREATIVE<sub> Coaching</sub></div>
         <div class="menu-toggle" onclick="toggleMenu(event)">&#9776;</div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Course1">coursr</a></li>
+            <li><a href="#facilities">facilities</a></li>
+            <li><a href="#enroll">enroll</a></li>
+            <li><a href="contact">Contact</a></li>
         </ul>
     </nav>
     <div class="loader-bg">
@@ -28,8 +30,6 @@
         <div class="box"></div>
         <div class="box"></div>
       </div>
-    
-    <br><br><br><br><br>
     <div class="banner1">
         <div class="logo">
             <img src="assets/img/graduated.png" alt="">
@@ -49,8 +49,9 @@
             </button>
         </div>
     </section>
-
+<div class="text">  <h1 style="font-size: 40px;padding-top: 20px;">Coach- Information</h1></div>
     <section class="coach-section">
+      
         <div class="coach-photo">
             <img src="assets/img/teacher.png" alt="Coach Photo">
         </div>
@@ -72,7 +73,7 @@
         <img class="slides" src="assets/img/study student.jpeg" alt="Slide 3">
     </div> -->
 
-
+<div class="text" id="about" style="font-size: 40px;">About-coaching</div>
     <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-content">
@@ -125,7 +126,7 @@
     </section>
 
     <section class="courses-section" id="Course1">
-        <h2>Our Courses</h2>
+        <h2>Our Courses & Facilities</h2>
         <div class="courses-container">
             <div class="course-card" style="--delay: 0.2s">
                 <div class="course-title">Chemistry</div>
@@ -155,9 +156,34 @@
         <p>Download Notes <br>and<br> Sample Papers</p>
         <a href="https://t.me/YOUR_TELEGRAM_CHANNEL" target="_blank" class="download-link">Download Now</a>
     </div>
-</div>
+
+<div class="facility-section" id="facilities">
+    <div class="box-container">
+        <h1>Our Facilities <br><img src="assets/img/coaching logo.jpeg" alt=""></h1>
+        <div style="margin-top: 20px;">
+          <button class="facility-button" onclick="togglePopup()">View Facilities</button>
+        </div>
+      </div>
     
+      <div class="popup-overlay" id="facilityPopup">
+        <div class="popup">
+          <button class="back-button" onclick="togglePopup()">Back</button>
+          <div class="facility-container">
+            <div class="facility">1. High-speed WiFi <img src="https://via.placeholder.com/50" alt="WiFi"></div>
+            <div class="facility">2. 24/7 Library Access <img src="https://via.placeholder.com/50" alt="Library"></div>
+            <div class="facility">3. Modern Computer Labs <img src="https://via.placeholder.com/50" alt="Computer Lab"></div>
+            <div class="facility">4. Professional Mentorship <img src="https://via.placeholder.com/50" alt="Mentorship"></div>
+            <div class="facility">5. Career Counseling <img src="https://via.placeholder.com/50" alt="Counseling"></div>
+            <div class="facility">6. Sports Complex <img src="https://via.placeholder.com/50" alt="Sports"></div>
+          </div>
+        </div>
+        </div>
+      </div>
+</div>
 </section>
+
+
+
 <!-- end  -->
     <div class="text">
     <h2 style="text-align: center;">Best Way to Be Successful</h2>
@@ -327,6 +353,13 @@
         document.querySelector('.main-content').style.display = "block";
     }, 2000);
 </script>
+<!-- facility  -->
+<script>
+    function togglePopup() {
+      const popupOverlay = document.getElementById('facilityPopup');
+      popupOverlay.classList.toggle('active');
+    }
+  </script>
 
     <script src="assets/js/script.js"></script>
 
