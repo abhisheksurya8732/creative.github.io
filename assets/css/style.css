@@ -1127,3 +1127,47 @@ a {
   background: #1ebe5d;
 }
 /* end  */
+
+.loader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2s forwards;
+  animation-delay: 2s;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background-color: #ff4500;
+  box-shadow: 0 0 10px #ff4500;
+  border-radius: 5px;
+  animation: upDown 1.2s ease-in-out infinite;
+}
+
+.box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes upDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
