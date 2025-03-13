@@ -21,8 +21,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#Course1">coursr</a></li>
             <li><a href="#facilities">facilities</a></li>
-            <li><a href="form.html">enroll</a></li>
-            <li><a href="form.html">Contact</a></li>
+            <li><a href="">enroll</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
     </nav>
     <div class="loader-bg">
@@ -46,7 +46,7 @@
                 <span class="circle" aria-hidden="true">
                     <span class="icon arrow"></span>
                 </span>
-                <span class="button-text"><a href="form.html">Get Start</a></span>
+                <span class="button-text"><a href="">Get Start</a></span>
             </button>
         </div>
     </section>
@@ -100,7 +100,7 @@
                 </p>
             </div>
             <button class="button">
-                <span class="text"><a href="form.html"> Discover</a> </span>
+                <span class="text"><a href=""> Discover</a> </span>
                 <span class="svg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" viewBox="0 0 38 15" fill="none">
                         <path fill="white"
@@ -281,7 +281,7 @@
         <p>We provide high-quality coaching with expert mentors, personalized learning, and a focus on student success.
         </p>
         <p>Join us to experience the best education for your future growth!</p>
-        <button class="btn"><i class="animation"></i><a href="form.html">enroll now</a><i class="animation"></i>
+        <button class="btn"><i class="animation"></i><a href="">enroll now</a><i class="animation"></i>
         </button>
     </div>
 
@@ -497,27 +497,6 @@
                 alert("Please provide your name, feedback, and rating!");
             }
         }
-    </script>
-    <!-- end  -->
-
-    <!-- form  -->
-    <script>
-        document.getElementById('enrollForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                course: document.getElementById('course').value
-            };
-
-            let enrollments = JSON.parse(localStorage.getItem('enrollments')) || [];
-            enrollments.push(formData);
-            localStorage.setItem('enrollments', JSON.stringify(enrollments));
-
-            window.location.href = 'enroll.html';
-        });
     </script>
     <!-- end  -->
 
