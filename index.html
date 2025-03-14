@@ -285,7 +285,7 @@
         </button>
     </div>
 
-    <!-- <div class="form-body" id="enroll">
+    <div class="form-body" id="enroll">
 
         <div class="form-container">
 
@@ -311,7 +311,7 @@
                     <button type="submit">Enroll Now</button>
                 </form>
         </div>
-    </div> -->
+    </div>
 
     <!-- feedback  -->
     <div class="text">FEEDBACK</div>
@@ -497,6 +497,27 @@
                 alert("Please provide your name, feedback, and rating!");
             }
         }
+    </script>
+    <!-- end  -->
+
+    <!-- form  -->
+    <script>
+        document.getElementById('enrollForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                course: document.getElementById('course').value
+            };
+
+            let enrollments = JSON.parse(localStorage.getItem('enrollments')) || [];
+            enrollments.push(formData);
+            localStorage.setItem('enrollments', JSON.stringify(enrollments));
+
+            window.location.href = 'enroll.html';
+        });
     </script>
     <!-- end  -->
 
